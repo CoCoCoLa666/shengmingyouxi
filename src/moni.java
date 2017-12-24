@@ -4,7 +4,6 @@ public class moni
 {
 	    private int num=5;
 	    private cell [][] c=new cell[num][num];
-	    
 	    public void panduan()
 	    {
 	        int i,j;
@@ -90,10 +89,51 @@ public class moni
 	            }
 	        }
 	    }
-	    public void randomcell()
+	    public void randomcell1()
+	    {
+	    	 int i,j;
+		        for(i=0;i<5;i++)
+		        {
+		            for(j=0;j<5;j++)
+		            {
+		                c[i][j]=new cell();
+		                c[i][j].setLive(0);
+		                c[i][j].setDeath(0);
+		            }
+
+		        }
+		        c[0][0].setSm(0);
+		        c[0][1].setSm(1);
+		        c[0][2].setSm(1);
+		        c[0][3].setSm(1);
+		        c[0][4].setSm(0);
+		        c[1][0].setSm(0);
+		        c[1][1].setSm(1);
+		        c[1][2].setSm(1);
+		        c[1][3].setSm(1);
+		        c[1][4].setSm(1);
+		        c[2][0].setSm(0);
+		        c[2][1].setSm(1);
+		        c[2][2].setSm(1);
+		        c[2][3].setSm(0);
+		        c[2][4].setSm(0);
+		        c[3][0].setSm(1);
+		        c[3][1].setSm(0);
+		        c[3][2].setSm(1);
+		        c[3][3].setSm(0);
+		        c[3][4].setSm(0);
+		        c[4][0].setSm(0);
+		        c[4][1].setSm(0);
+		        c[4][2].setSm(1);
+		        c[4][3].setSm(1);
+		        c[4][4].setSm(0);
+	    }
+	    public moni randomcell()
 	    {
 	        int i,j,sm;
-	        /*for(i=0;i<num;i++)
+	        moni t=new moni();
+	        t.randomcell1();
+	       /* for(i=0;i<num;i++)
 	        {
 	            for(j=0;j<num;j++)
 	            {
@@ -140,6 +180,7 @@ public class moni
 	        c[4][2].setSm(1);
 	        c[4][3].setSm(1);
 	        c[4][4].setSm(0);
+	        return t;
 	    }
 	    public void dayin()
 	    {
